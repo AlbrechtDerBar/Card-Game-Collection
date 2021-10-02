@@ -2,8 +2,13 @@
 newDeck();
 window.onload = function() {
     var id = "card-"
-    for (let i = 0; i < 19; i++) {
+    for (let i = 0; i <= 19; i++) {
         var currCard = document.getElementById(id + i);
+        var img = document.createElement("img");
+        img.setAttribute("src", "../images/card base.png");
+        img.setAttribute("class", "card");
+
+        currCard.appendChild(img);
     }
 }
 
