@@ -35,11 +35,13 @@ function deleteCard(num) {
     deck = newdeck;
 }
 
-// functions takes the max numbers in the deck as a parameter and returns a random card from the deck
-function drawRandomCard(max) {
-    var cardNum = Math.floor(Math.random() * max);
+// functions that returns a random card from the deck
+function drawRandomCard() {
+    var drawnCard;
+    var cardNum = Math.floor(Math.random() * deck.length);
+    drawnCard = deck[cardNum];
     deleteCard(cardNum);
-    return deck[cardNum];
+    return drawnCard;
 }
 
 // draws the card from the top of the deck

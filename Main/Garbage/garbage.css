@@ -1,10 +1,35 @@
 .player-field{
     display: grid;
-    grid-template-columns: repeat(5, 126px);
+    grid-template-columns: repeat(5, 130px);
+}
+
+.field-box {
+    /* border: 1px solid red; */
+    height: 250px;
+    width: 126px;
 }
 
 .card {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 200px;
     width: 126px;
+}
+
+#deck {
+    display: grid;
+    grid-template-columns: repeat(4, 130px);
+}
+
+.deck-col {
+    /* border: 1px solid red; */
+    height: 250px;
+    width: 126px;
+}
+
+.player1 {
+    display: grid;
+}
+
+.player2 {
+    display: none;
 }
