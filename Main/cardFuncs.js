@@ -5,7 +5,7 @@ var deck = [];
 
 // creates a new deck of 52 cards
 function newDeck() {
-    var suit = ["spade", "heart", "club", "diamond"];
+    var suit = ["S", "H", "C", "D"];
     var face = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
     var cardCounter = 0;
 
