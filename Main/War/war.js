@@ -2,7 +2,7 @@ newDeck();
 
 var playerHand, computerHand;
 var playerDeck = [], computerDeck = [];
-var playerWarDeck = [], computerWarDeck = [];
+var pot = [];
 var playerWins, computerWins;
 
 function getCards() {
@@ -47,10 +47,9 @@ function split() {
 
 function war(card1, card2) {
     console.log(card1);
-    playerWarDeck.push(card1);
-    computerWarDeck.push(card2);
-    console.log(playerWarDeck);
-    console.log(computerWarDeck);
+    pot.push(card1);
+    pot.push(card2);
+    console.log(pot);
 
     playerHand = playerDeck.pop();
     computerHand = computerDeck.pop();
@@ -65,9 +64,11 @@ function war(card1, card2) {
 
     if(playerNum > computerNum) {
         playerDeck.unshift(playerHand);
-        playerDeck.unshift(playerWarDeck[0]);
         playerDeck.unshift(computerHand);
-        playerDeck.unshift(computerWarDeck[0]);
+        for (let i = 0; i < pot.length; i++) {
+            console.log(pot[i]);
+            playerDeck.unshift(pot[i]);
+        }
 
         document.getElementById("warButton").style.display = "none";
         document.getElementById("dealButton").style.display = "inline-block";
@@ -75,10 +76,16 @@ function war(card1, card2) {
     else if(playerNum < computerNum) {
         computerDeck.unshift(playerHand);
         computerDeck.unshift(computerHand);
+        for (let i = 0; i < pot.length; i++) {
+            console.log(pot[i]);
+            computerDeck.unshift(pot[i]);
+        }
 
         document.getElementById("warButton").style.display = "none";
         document.getElementById("dealButton").style.display = "inline-block";
     }
+    console.log(playerDeck);
+    console.log(computerDeck);
 }
 
 function toNum(card){
