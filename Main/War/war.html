@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../cardFuncs.js"></script>
+    <script src="war.js"></script>
+
+    <link rel="stylesheet" href="war.css">
+</head>
+
+<body>
+    <h1>War</h1>
+    <button id='playButton' class="hidden">PLAY!</button>
+
+    <div id="gameBoard">
+        <div id="gameArea">
+            <div>
+                <!-- Counting cards in deck -->
+                <div class="playerCount"></div>
+                <div class="computerCount"></div>
+            </div>
+
+            <div class="gameTable">
+                <!-- Left side -->
+                <div class="playerDeck"><img id="playerCard" src="../images/D-Back.png"></div>
+
+                <!-- Middle -->
+                <div class="middleButtons">
+                <button id="dealButton" onclick="getCards()">DEAL</button>
+                <br>
+                <button class="newGameButton" onclick="split()">NEW GAME</button>
+                </div>
+
+                <!-- Right side -->
+                <div class="compDeck"><img id="computerCard" src="../images/D-Back.png"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -8,6 +8,7 @@
         <title>Garbage</title>
     </header>
     <body>
+        <div id="background">
         <form>
             <button formaction="../index.html">Home</button>
         </form>
@@ -30,7 +31,7 @@
         <button onclick="nextTurn()">Next Turn</button>
         <button onclick="load()">End Game</button>
 
-        <h1 class="player1">player 1</h1>
+        <h1 class="player1">Player 1</h1>
         <div id="player1-field" class="player-field player1">
             <div id="card-0" class="field-box" onclick="flipCard(this)" data-cardNum="0"><h2>1</h2></div>
             <div id="card-1" class="field-box" onclick="flipCard(this)" data-cardNum="1"><h2>2</h2></div>
@@ -44,7 +45,7 @@
             <div id="card-9" class="field-box" onclick="flipCard(this)" data-cardNum="9"><h2>10</h2></div>
         </div>
 
-        <h1 class="player2">player 2</h1>
+        <h1 class="player2">Player 2</h1>
         <div id="player2-field" class="player-field player2">
             <div id="card-10" class="field-box" onclick="flipCard(this)" data-cardNum="0"><h2>1</h2></div>
             <div id="card-11" class="field-box" onclick="flipCard(this)" data-cardNum="1"><h2>2</h2></div>
@@ -57,6 +58,7 @@
             <div id="card-18" class="field-box" onclick="flipCard(this)" data-cardNum="8"><h2>9</h2></div>
             <div id="card-19" class="field-box" onclick="flipCard(this)" data-cardNum="9"><h2>10</h2></div>
         </div>
+    </div>
     </body>
 </html>
 

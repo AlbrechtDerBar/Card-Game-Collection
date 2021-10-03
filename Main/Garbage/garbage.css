@@ -33,3 +33,8 @@
 .player2 {
     display: none;
 }
+
+body {
+    background-image: url("../images/background2.png");
+    background-size: 100%;
+}
