@@ -1,0 +1,89 @@
+body {
+    background-color: #30415D;
+    color: #fff;
+    font-family: Lato, sans-serif;
+    letter-spacing: .1em;
+    margin: 0;
+    overflow-x: hidden;
+    text-align: center;
+    background-image: url("digital_swag_wallpaper.png");
+    background-size: 20%;
+}
+
+
+
+/* Buttons Styles */
+button {
+    border: 0;
+    box-shadow: 3px 3px 3px rgb(0, 0, 0);
+    color: rgb(2, 2, 2);
+    cursor: pointer;
+    font-family: Lato;
+    font-size: 25px;
+    margin: 10px auto;
+    padding: 10px 0;
+    width: 170px;
+}
+
+button:hover {
+    background-color: rgb(102, 101, 101);
+}
+
+#playButton {
+    margin-top: 100px;
+    width: 150px;
+}
+
+.gameTable div {
+    max-width: 35%;
+    margin: auto;
+    vertical-align: middle;
+    width: 200px;
+    border: #fd0000;
+    background-color: aqua;
+}
+
+#gameArea {
+    margin-top: 100px;
+}
+
+#gameBoard {
+    margin: auto;
+    padding: 250px 200px;
+    width: 50%;
+    height: 100%;
+}
+
+.playerDeck1 {
+position:absolute;
+top:0;
+right:0;
+}
+
+.playerDeck2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.playerDeck3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.playerDeck4 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* .playerDeckPlaceholder {
+    display: none;
+} */
+
+/* img {
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #222;
+    width: 100%;
+} */
