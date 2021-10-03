@@ -8,46 +8,54 @@
         <title>Garbage</title>
     </header>
     <body>
+        <form>
+            <button formaction="../index.html">Home</button>
+        </form>
         
         <div id="deck">
-            <h1>Deck</h1>
+            <!-- <h1>Deck</h1>
             <div class="deck-col">
                 <img src="../images/E-Back.png" alt="deck" onclick="setHand()" class="card">
-            </div>
+            </div> -->
             <h1>Hand</h1>
             <div class="deck-col">
                 <div id="player-hand" class="card"></div>
             </div>
+            <h1>Discard</h1>
+            <div>
+                <div id="discard" class="card" onclick="selectDiscard(this)"></div>
+            </div>
         </div>
 
         <button onclick="nextTurn()">Next Turn</button>
+        <button onclick="load()">End Game</button>
 
         <h1 class="player1">player 1</h1>
         <div id="player1-field" class="player-field player1">
-            <div id="card-0" class="field-box" onclick="flipCard(this)"><h2>1</h2></div>
-            <div id="card-1" class="field-box" onclick="flipCard(this)"><h2>2</h2></div>
-            <div id="card-2" class="field-box" onclick="flipCard(this)"><h2>3</h2></div>
-            <div id="card-3" class="field-box" onclick="flipCard(this)"><h2>4</h2></div>
-            <div id="card-4" class="field-box" onclick="flipCard(this)"><h2>5</h2></div>
-            <div id="card-5" class="field-box" onclick="flipCard(this)"><h2>6</h2></div>
-            <div id="card-6" class="field-box" onclick="flipCard(this)"><h2>7</h2></div>
-            <div id="card-7" class="field-box" onclick="flipCard(this)"><h2>8</h2></div>
-            <div id="card-8" class="field-box" onclick="flipCard(this)"><h2>9</h2></div>
-            <div id="card-9" class="field-box" onclick="flipCard(this)"><h2>10</h2></div>
+            <div id="card-0" class="field-box" onclick="flipCard(this)" data-cardNum="0"><h2>1</h2></div>
+            <div id="card-1" class="field-box" onclick="flipCard(this)" data-cardNum="1"><h2>2</h2></div>
+            <div id="card-2" class="field-box" onclick="flipCard(this)" data-cardNum="2"><h2>3</h2></div>
+            <div id="card-3" class="field-box" onclick="flipCard(this)" data-cardNum="3"><h2>4</h2></div>
+            <div id="card-4" class="field-box" onclick="flipCard(this)" data-cardNum="4"><h2>5</h2></div>
+            <div id="card-5" class="field-box" onclick="flipCard(this)" data-cardNum="5"><h2>6</h2></div>
+            <div id="card-6" class="field-box" onclick="flipCard(this)" data-cardNum="6"><h2>7</h2></div>
+            <div id="card-7" class="field-box" onclick="flipCard(this)" data-cardNum="7"><h2>8</h2></div>
+            <div id="card-8" class="field-box" onclick="flipCard(this)" data-cardNum="8"><h2>9</h2></div>
+            <div id="card-9" class="field-box" onclick="flipCard(this)" data-cardNum="9"><h2>10</h2></div>
         </div>
 
         <h1 class="player2">player 2</h1>
         <div id="player2-field" class="player-field player2">
-            <div id="card-10" class="field-box" onclick="flipCard(this)"><h2>1</h2></div>
-            <div id="card-11" class="field-box" onclick="flipCard(this)"><h2>2</h2></div>
-            <div id="card-12" class="field-box" onclick="flipCard(this)"><h2>3</h2></div>
-            <div id="card-13" class="field-box" onclick="flipCard(this)"><h2>4</h2></div>
-            <div id="card-14" class="field-box" onclick="flipCard(this)"><h2>5</h2></div>
-            <div id="card-15" class="field-box" onclick="flipCard(this)"><h2>6</h2></div>
-            <div id="card-16" class="field-box" onclick="flipCard(this)"><h2>7</h2></div>
-            <div id="card-17" class="field-box" onclick="flipCard(this)"><h2>8</h2></div>
-            <div id="card-18" class="field-box" onclick="flipCard(this)"><h2>9</h2></div>
-            <div id="card-19" class="field-box" onclick="flipCard(this)"><h2>10</h2></div>
+            <div id="card-10" class="field-box" onclick="flipCard(this)" data-cardNum="0"><h2>1</h2></div>
+            <div id="card-11" class="field-box" onclick="flipCard(this)" data-cardNum="1"><h2>2</h2></div>
+            <div id="card-12" class="field-box" onclick="flipCard(this)" data-cardNum="2"><h2>3</h2></div>
+            <div id="card-13" class="field-box" onclick="flipCard(this)" data-cardNum="3"><h2>4</h2></div>
+            <div id="card-14" class="field-box" onclick="flipCard(this)" data-cardNum="4"><h2>5</h2></div>
+            <div id="card-15" class="field-box" onclick="flipCard(this)" data-cardNum="5"><h2>6</h2></div>
+            <div id="card-16" class="field-box" onclick="flipCard(this)" data-cardNum="6"><h2>7</h2></div>
+            <div id="card-17" class="field-box" onclick="flipCard(this)" data-cardNum="7"><h2>8</h2></div>
+            <div id="card-18" class="field-box" onclick="flipCard(this)" data-cardNum="8"><h2>9</h2></div>
+            <div id="card-19" class="field-box" onclick="flipCard(this)" data-cardNum="9"><h2>10</h2></div>
         </div>
     </body>
 </html>
