@@ -27,8 +27,8 @@ function getCards() {
         computerDeck.unshift(computerHand);
     }
     else if(playerNum == computerNum) {
-        document.getElementById("dealButton").removeEventListener("click", getCards());
-        document.getElementById("dealButton").addEventListener("click", war(playerHand, computerHand));
+        document.getElementById("warButton").style.display = "inline-block";
+        document.getElementById("dealButton").style.display = "none";
     }
     console.log(playerDeck);
     console.log(computerDeck);
@@ -46,8 +46,11 @@ function split() {
 }
 
 function war(card1, card2) {
-    playerWarDeck.unshift(card1);
-    computerWarDeck.unshift(card2);
+    console.log(card1);
+    playerWarDeck.push(card1);
+    computerWarDeck.push(card2);
+    console.log(playerWarDeck);
+    console.log(computerWarDeck);
 
     playerHand = playerDeck.pop();
     computerHand = computerDeck.pop();
@@ -62,23 +65,19 @@ function war(card1, card2) {
 
     if(playerNum > computerNum) {
         playerDeck.unshift(playerHand);
-        for (let i = 0; i < playerWarDeck.length; i++) {
-            playerDeck.unshift(playerWarDeck[i]);
-        }
+        playerDeck.unshift(playerWarDeck[0]);
         playerDeck.unshift(computerHand);
-        for (let i = 0; i < computerWarDeck.length; i++) {
-            playerDeck.unshift(computerWarDeck[i]);
-        }
+        playerDeck.unshift(computerWarDeck[0]);
+
+        document.getElementById("warButton").style.display = "none";
+        document.getElementById("dealButton").style.display = "inline-block";
     }
     else if(playerNum < computerNum) {
         computerDeck.unshift(playerHand);
-        for (let i = 0; i < playerWarDeck.length; i++) {
-            computerDeck.unshift(playerWarDeck[i]);
-        }
         computerDeck.unshift(computerHand);
-        for (let i = 0; i < computerWarDeck.length; i++) {
-            computerDeck.unshift(computerWarDeck[i]);
-        }
+
+        document.getElementById("warButton").style.display = "none";
+        document.getElementById("dealButton").style.display = "inline-block";
     }
 }
 

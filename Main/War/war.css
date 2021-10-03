@@ -60,3 +60,7 @@ button:hover {
 .hidden {
     visibility: hidden;
 }
+
+#warButton {
+    display: none;
+}
